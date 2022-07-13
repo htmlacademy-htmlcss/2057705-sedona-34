@@ -44,8 +44,17 @@ body {
 }
 
 /* ХЕДЕР */
+.header-logo-small {
+  height: 70px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  /* margin-left: 70px; */
+}
+
 .navigation {
   width: 1200px;
+  height: 65px;
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
@@ -59,13 +68,38 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  margin-left: 70px;
 
 }
 
 .navigation-user {
   max-width: 320px;
-  margin-left: auto;
+  margin-right: 85px;
+  display: flex;
+  align-items: center;
+}
 
+.count-badge {
+  position: absolute;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  border-radius: 50%;
+  background-color: #7DB54F;
+  color: #FFFFFF;
+  padding: 3px 5px;
+  letter-spacing: -0.1em;
+  margin-top: -21px;
+}
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000;
 }
 
 .navigation-item {
@@ -79,8 +113,10 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   display: block;
-  padding: 24px 12px;
+  align-items: center;
+  padding: 20px 19px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -88,6 +124,16 @@ body {
   text-transform: capitalize;
   color: #000000;
   text-decoration: none;
+}
+
+.navigation-main {
+  position: relative;
+  text-decoration-line: underline;
+  text-underline-offset: 23px;
+  border: 2px;
+  z-index: 1;
+  text-decoration-color: #756257;
+  /* text-underline-position: under; */
 }
 
 .navigation-list .navigation-user {
@@ -98,6 +144,21 @@ body {
 .main-container {
   flex-grow: 1;
 }
+
+/* кнопка в мейне */
+.button-main {
+  min-width: 160px;
+  background-color: #756157;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 
 .main-logo {
   background-image: url("../images/main/main-base.jpg");
@@ -250,6 +311,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-align: center;
+  /* padding-top: 91px; */
 }
 
 .interest-text {
@@ -273,6 +335,8 @@ body {
   display: block;
   width: 574px;
   height: 60px;
+  box-sizing: border-box;
+  padding: 12px 15px;
 }
 
 .subscription-cause {
@@ -292,25 +356,19 @@ body {
   padding-bottom: 94px;
 }
 
-/* ФУУТЕР */
-
-.footer-social {
-  width: 1200px;
-  height: 120px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  background: #FFFFFF;
-  /* padding: 40px 70px 30px 70px; */
-  /* margin-top: 0; */
-
-}
-
 .subscription-text {
   font-size: 22px;
   line-height: 26px;
   color: #FFFFFF;
   text-align: center;
+}
+
+.field {
+  width: 600px;
+  height: 60px;
+  background: #F2F2F2;
+  border-radius: 10px 0px 0px 10px;
+  border: none;
 }
 
 .button-submit {
@@ -321,48 +379,66 @@ body {
   font-size: 20px;
   line-height: 36px;
   text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+
 }
 
 .subscription-button {
   justify-content: center;
   display: flex;
+
 }
 
-.contacts_phone {
+/* ФУУТЕР */
+.wrapper {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+
+.footer_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+.footer_social {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-left: 70px;
+  /* padding: 40px; */
+}
+
+.footer_social_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  max-width: 400px;
+  margin-right: 26px;
+  /* gap: 10px; */
+  padding: 40px 10px;
+}
+
+.footer_phone {
+  width: 400px;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
   text-decoration: none;
-  margin: 40px;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.footer-social-list {
-  display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
-  list-style-type: none;
-  width: 200px;
-  /* margin: 0;
-  padding: 0; */
-  margin-left: 70px;
-  margin: 45px;
-
-}
-
-.footer-social-item {
-  margin-right: 33.3%;
-  display: flex;
-  justify-content: space-between;
-  /* width: 24px;
-  height: 14px;
-  margin-right: 26px; */
-}
-
-.telephone {
-  justify-content: center;
-  margin: 45px;
-}
-
-.HTML-logo {
-  margin: 49px;
+.footer_logo {
+  margin: 0 auto;
+  margin-right: 70px;
 }
